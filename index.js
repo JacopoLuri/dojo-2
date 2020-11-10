@@ -1,3 +1,6 @@
+// code avaiable at https://github.com/JacopoLuri/dojo-2
+
+//thougth process:
 // output:
 // [
 //     [a - 1, a - 2 ... a - 8],
@@ -12,7 +15,7 @@
 
 
 // create an empty array for our chessboard rows
-let letters = [];
+let rowsLetters = [];
 
 //create a function that will dinamically fill how much rows we want in the array 
 const createRows = (startLetter, endLetter) => {
@@ -24,10 +27,9 @@ const createRows = (startLetter, endLetter) => {
     };
     return grid;
 };
-// setting an 8 rows chessboard
-letters = createRows('a', 'h');
 
 //create a function that will properly create the cheesboard starttin from the array of letters (rows) and add columns (nested array)
+// rowsLetters = [a, b, c, d, e, f, g, h]
 const chessBoard = (myArr) => {
     let board = [];
     for (let i = 0; i < myArr.length; i++) {
@@ -40,7 +42,9 @@ const chessBoard = (myArr) => {
     return board;
 };
 
-console.log(chessBoard(letters));
+// setting an 8 rows chessboard
+rowsLetters = createRows('a', 'h');
+console.log(chessBoard(rowsLetters));
 // result 8 x 8 board
 // [
 //     [
